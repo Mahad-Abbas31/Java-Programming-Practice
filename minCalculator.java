@@ -1,3 +1,5 @@
+import java.util.Scanner;                           // 
+
 public class minCalculator {
     // int x;  // ___ 1st number
     // int y;  // ___ 2nd number
@@ -23,11 +25,55 @@ public class minCalculator {
     public void compare(float x, float y){
         if(x>y)
             System.out.println(x + " is greater than " + y);
-        if(x==y)
+        else if(x==y)
             System.out.println(x + " is  equal to " + y);
-        if(x<y)
+        else
             System.out.println(x + " is  less than " + y);
     }
+
+    public void displayFunctions(){
+        Scanner scanner = new Scanner(System.in);       // ____ For INPUT (Scannner class object) 
+        int choice;
+
+        float a; float b;
+        System.out.println("Enter Two Numbers to perform an Arithematic Calculation");
+        a = scanner.nextFloat();
+        b = scanner.nextFloat();
+        
+        do{
+            System.out.println("---Calculator Functions---");
+            System.out.println("1. Add");
+            System.out.println("2. Subtract");
+            System.out.println("3. Multiply");
+            System.out.println("4. Divide");
+            System.out.println("5. Compare");
+            System.out.println("6. EXIT");
+            System.out.print("Enter Your Choice: ");
+            choice = scanner.nextInt();                             // ____ For USER INPUT
+
+            switch (choice) {
+                case 1: System.out.println("Added " + a + " and " + b + ": " + add(a, b));
+                    break;
+            
+                case 2: System.out.println("Subtracted " + b + " from " + a + ": " + subtract(a, b));
+                    break;
+            
+                case 3: System.out.println("Multiplied " + a + " and " + b + ": " + multiply(a, b));
+                    break;
+            
+                case 4: System.out.println("Divided " + a + " by " + b + ": " + divide(a, b));
+                    break;
+            
+                case 5: compare(a, b);
+                    break;
+                            
+                default: System.out.println("Your Entered a wrong Choice, Enter 1-6 for Correct choice to perform the Arithematic Operation");
+                    break;
+            }
+        }while(choice!=6);
+        scanner.close();
+    }
+
     
 }
 
