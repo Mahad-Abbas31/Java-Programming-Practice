@@ -43,7 +43,7 @@ public class Curtain {
     }
 
     public void addToFile() throws IOException {
-        FileWriter fout = new FileWriter("curtains.txt");
+        FileWriter fout = new FileWriter("curtains.txt", true);
 
         fout.write(id + "," + price + "," + type + "," + color + "\n");
         fout.close();    

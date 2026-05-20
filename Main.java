@@ -23,21 +23,21 @@ public class Main {
         
         // _____ Taking Data from User Input
         for(int i=0; i<arr.length; i++){
-            System.out.print("Enter ID for Record " + i + ": ");
+            System.out.print("\nEnter ID for Record " + (i+1) + ": ");
             id = sc.nextInt();
             arr[i].setId(id);            
             sc.nextLine();
 
-            System.out.print("Enter Price for Record " + i + ": ");
+            System.out.print("Enter Price for Record " + (i+1) + ": ");
             price = sc.nextDouble();
             arr[i].setPrice(price);
             sc.nextLine();
             
-            System.out.print("Enter Type for Record " + i + ": ");
+            System.out.print("Enter Type for Record " + (i+1) + ": ");
             type = sc.nextLine();
             arr[i].setType(type);
             
-            System.out.print("Enter Color for Record " + i + ": ");
+            System.out.print("Enter Color for Record " + (i+1) + ": ");
             color = sc.nextLine();
             arr[i].setColor(color);
         }

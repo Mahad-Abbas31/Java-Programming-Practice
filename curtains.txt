@@ -1,0 +1,4 @@
+3,231.0,Soft,White
+1,32.0,velvet,red
+3,34.0,wool,black
+2,43.0,luxury,white
